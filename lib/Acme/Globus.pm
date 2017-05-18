@@ -6,7 +6,6 @@ use strict;
 use warnings;
 
 use Carp ;
-use Data::Dumper ;
 use JSON ;
 use Net::OpenSSH ;
 
