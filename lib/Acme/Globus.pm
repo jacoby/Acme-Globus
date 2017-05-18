@@ -14,29 +14,29 @@ use Net::OpenSSH ;
 
 =head1 NAME
 
-    Globus - Object-Oriented interface to Globus
+Globus - Object-Oriented interface to Globus
 
 =head1 DESCRIPTION
 
-    Globus is a tool that allows the sharing of scientific data between 
-    researchers and institutions. Globus enables you to transfer your 
-    data using just a web browser, or using their SSH interface at 
-    cli.globusonline.org.
+Globus is a tool that allows the sharing of scientific data between 
+researchers and institutions. Globus enables you to transfer your 
+data using just a web browser, or using their SSH interface at 
+cli.globusonline.org.
 
-    This is a client library for the Globus CLI.
+This is a client library for the Globus CLI.
 
-    For detailed documentation of the API, 
-    see http://dev.globus.org/cli/reference.
+For detailed documentation of the API, 
+see L<http://dev.globus.org/cli/reference>.
 
 =head1 CAVEATS
 
-    This code is a work in progress, focusing on my needs at the moment 
-    rather than covering all the capabilities of the Globus CLI. It is
-    therefore very stubtastic.
+This code is a work in progress, focusing on my needs at the moment 
+rather than covering all the capabilities of the Globus CLI. It is
+therefore very stubtastic.
 
-    This module also relies very much on SSH, and thus the rules of 
-    private and public keys. Therefore, using it as a shared tool would
-    be ill-advised if not impossible.
+This module also relies very much on SSH, and thus the rules of 
+private and public keys. Therefore, using it as a shared tool would
+be ill-advised if not impossible.
 
 =head1 SYNOPSIS
 
