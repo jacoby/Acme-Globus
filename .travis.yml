@@ -10,3 +10,13 @@ perl:
   - "5.14"
   - "5.12"
   - "5.10"
+notifications:
+  email: false
+  irc:
+    channels:
+      - "irc.perl.org#purduepm"
+    template:
+      - "%{result}: %{repository} (%{commit}) %{commit_subject}"
+    on_success: change
+    on_failure: always
+    use_notice: true
