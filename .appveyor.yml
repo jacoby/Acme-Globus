@@ -22,7 +22,7 @@ install:
 
 
 build_script:
+  - perl -e 2
 
-  - perl Makefile.PL
-
-  - dmake test
+test_script:
+  - dzil test

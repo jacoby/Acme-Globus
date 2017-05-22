@@ -18,9 +18,12 @@ perl:
 install:
   - export RELEASE_TESTING=1 AUTOMATED_TESTING=1 AUTHOR_TESTING=1 HARNESS_OPTIONS=c HARNESS_TIMER=1
   - cpanm --quiet --notest --installdeps .
+  - cpanm --no-skip-satisfied Class::Method::Modifiers YAML::XS || { cat ~/.cpanm/build.log ; false ; }
+  - dzil authordeps --missing | cpanm --no-skip-satisfied || { cat ~/.cpanm/build.log ; false ; }
+  - dzil listdeps --author --missing | cpanm --no-skip-satisfied || { cat ~/.cpanm/build.log ; false ; }
 
 script:
-  - prove -lrsv t
+  - dzil test --author --release
 
 notifications:
   email:
