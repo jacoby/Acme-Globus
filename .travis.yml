@@ -16,20 +16,13 @@ perl:
   - "5.10"
 sudo: false             # faster builds as long as you don't need sudo access
 
+matrix:
+  include:
+    - perl: 5.18
+      env: COVERAGE=1   # enables coverage+coveralls reporting
+  allow_failures:
+    - perl: blead       # ignore failures for blead perl
+sudo: false             # faster builds as long as you don't need sudo access
 before_install:
-  - git clone git://github.com/travis-perl/helpers ~/travis-perl-helpers
-  - source ~/travis-perl-helpers/init
-  - build-perl
-  - perl -V
-  - build-dist
-  - cd $BUILD_DIR             # $BUILD_DIR is set by the build-dist command
-install:
-  - cpan-install --deps       # installs prereqs, including recommends
-  - cpan-install --coverage   # installs converage prereqs, if enabled
-before_script:
-  - coverage-setup
-script:
-  - prove -l -j$(test-jobs) $(test-files)   # parallel testing
-after_success:
-  - coverage-report
+  - eval $(curl https://travis-perl.github.io/init) --auto
 
