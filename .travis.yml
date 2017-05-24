@@ -26,3 +26,10 @@ sudo: false             # faster builds as long as you don't need sudo access
 before_install:
   - eval $(curl https://travis-perl.github.io/init) --auto
 
+notifications:
+  email:
+    - jacoby@cpan.org
+  on_success: change
+  on_failure: always 
+
+
