@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jacoby/Acme-Globus.svg?branch=master)](https://travis-ci.org/jacoby/Acme-Globus)
+
 This is the README file for Acme::Globus
 
 Acme::Globus is a module that implements an interface to Globus 
