@@ -1,4 +1,4 @@
-# Build/Test Configuration for Dancer2
+# Build/Test Configuration for Acme::Globus
 # http://www.appveyor.com/docs/appveyor-yml
 
 # whitelist for branches, so that working on a weird branch would 
