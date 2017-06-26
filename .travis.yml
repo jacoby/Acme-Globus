@@ -5,6 +5,9 @@ language: perl
 before_install:
   - cpanm JSON
   - cpanm Net::OpenSSH 
+os:
+  - linux
+  - osx
 perl:
   - "blead"
   - "5.24"
